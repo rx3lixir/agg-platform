@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "myzmp7ub1y.ufs.sh",
+        pathname: "/**", // разрешить любые пути
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
